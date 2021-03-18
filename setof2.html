@@ -10,7 +10,7 @@ document.getElementById(target).style.fill=color;
 console.log(source.value);
 }
 
-function clicksave(){var textToSave = document.getElementById('myvenn').innerHTML;var hiddenElement = document.createElement('a');hiddenElement.href = 'data:attachment/text,' + textToSave; hiddenElement.target = '_blank'; hiddenElement.download = 'file.svg';hiddenElement.click();} 
+function clicksave(){var textToSave = encodeURIComponent(document.getElementById('myvenn').innerHTML);var hiddenElement = document.createElement('a');hiddenElement.href = 'data:attachment/text,' + textToSave; hiddenElement.target = '_blank'; hiddenElement.download = 'file.svg';hiddenElement.click();} 
 
 
 function colorclicker(dom){
@@ -74,12 +74,12 @@ Set B
 
 
 
-<div id="myvenn">
+<div id="myvenn" contenteditable>
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
